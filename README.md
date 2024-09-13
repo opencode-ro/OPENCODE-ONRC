@@ -208,7 +208,7 @@ curl -L 'https://$uri/api/partners/cancelRequest' \
 #### Query request status *
 
 <details>
- <summary><code>POST</code> <code><b>{uri}/api/partners/queryRequestStatus</b></code> <code>(query request status - as an async **alternative** to webhook implementation)</code></summary>
+ <summary><code>POST</code> <code><b>{uri}/api/partners/queryRequestStatus</b></code> <code>(query request status - as an async alternative to webhook implementation)</code></summary>
 
 ##### Endpoint
 
