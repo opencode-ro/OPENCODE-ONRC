@@ -164,8 +164,9 @@ curl -L 'https://$uri/api/partners/cancelRequest' \
 > | partnerRef      | all |   String   | Partner's unique internal ID of request  |
 > | requestStatus      | all |   String   | Request Status  |
 > | onrcPortalNo | SentToONRC | String | ONRC Portal Number (ID) |
+> | accountBalance | SentToONRC | String | ONRC account wallet balance, if applicable |
 > | docUri      | DoneONRC,Finalised|   String   | Direct download URI for generated document (present only if generated)  |
-> | onrcInvoiceUri | Finalised* | String | Direct download URI for ONRC invoice (only for partners with self-invoice) |
+> | onrcInvoiceUri | Finalised* | String | "WALLET" - Hardcoded value for partners using wallet | Direct download URI for ONRC invoice (only for partners with self-invoice) |
 
 ###### Examples
 ```json
@@ -173,7 +174,8 @@ curl -L 'https://$uri/api/partners/cancelRequest' \
 "requestId": "jrurF1FhZ7nuyYAdy6Xm",
 "partnerRef":  "12345",
 "requestStatus":  "SentToONRC",
-"onrcPortalNo": "856012"
+"onrcPortalNo": "856012",
+"accountBalance": "120"
 }
 ```
 ```json
@@ -190,7 +192,7 @@ curl -L 'https://$uri/api/partners/cancelRequest' \
 "partnerRef":  "d5f3af8e",
 "requestStatus":  "Finalised",
 "docUri":  "https://firebasestorage.googleapis.com/v0/b/certificatconstatator-dev.appspot.com/o/2022_7_25_certificat273627-10S0Q.pdf?alt=media&token=ee42cf9c-c185-4291-9537-8bb518533218",
-"onrcInvoiceUri":  "https://firebasestorage.googleapis.com/v0/b/certificatconstatator-dev.appspot.com/o/_data1_portal_ccfil_certificate_2023_1_1_factura465298-MZX87.pdf?alt=media&token=a72fd4a8-b62d-43ab-a2de-5d34d7a2a353"
+"onrcInvoiceUri":  "WALLET"
 }
 ```
 
@@ -259,6 +261,7 @@ curl -L 'https://$uri/api/partners/queryRequestStatus' \
 > | partnerRef      |   String   | Partner's **unique internal ID** of request  |
 > | requestStatus      |   String   | Request Status  |
 > | onrcPortalNo | String | ONRC Portal Number |
+> | accountBalance | String | ONRC account wallet balance, if applicable |
 > | docUri      |   String   | Direct download URI for generated document (present only if generated)  |
 > | onrcInvoiceUri | String | Direct download URI for ONRC invoice (only for partners with self-invoice) |
 
@@ -269,8 +272,9 @@ curl -L 'https://$uri/api/partners/queryRequestStatus' \
 "partnerRef":  "12345",
 "requestStatus":  "Finalised",
 "onrcPortalNo": "856012",
+"accountBalance" : "120",
 "docUri":  "https://firebasestorage.googleapis.com/v0/b/certificatconstatator-dev.appspot.com/o/2022_7_25_certificat273627-10S0Q.pdf?alt=media&token=ee42cf9c-c185-4291-9537-8bb518533218",
-"onrcInvoiceUri":  "https://firebasestorage.googleapis.com/v0/b/certificatconstatator-dev.appspot.com/o/_data1_portal_ccfil_certificate_2023_1_1_factura465298-MZX87.pdf?alt=media&token=a72fd4a8-b62d-43ab-a2de-5d34d7a2a353"
+"onrcInvoiceUri":  "WALLET"
 }
 ```
 
