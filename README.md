@@ -169,6 +169,7 @@ curl -L 'https://$uri/api/partners/cancelRequest' \
 > | onrcInvoiceUri | Finalised* | String | "WALLET" - Hardcoded value for partners using wallet | Direct download URI for ONRC invoice (only for partners with self-invoice) |
 
 ###### Examples
+###### _* in TEST system, the status update webhooks are generated automatically for all requests with a delay of ~5 seconds inbetween._
 ```json
 {
 "requestId": "jrurF1FhZ7nuyYAdy6Xm",
