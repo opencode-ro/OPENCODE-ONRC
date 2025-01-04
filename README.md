@@ -40,7 +40,7 @@ curl -L 'https://$uri/api/partners/submitRequest' \
 -H 'Content-Type: application/json' \
 -d '{
     "cui":  "32332105",
-    "documentType":  "InfoCERT - Certificat constatator de bază",
+    "documentType":  "INFOCERT_CONSTATATOR_PJ",
     "documentScope":  "Agenția Națională pentru Ocuparea Forței de Muncă",
     "priority":  "Low",
     "partnerRef":  "12345"
