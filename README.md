@@ -164,6 +164,7 @@ curl -L 'https://$uri/api/partners/cancelRequest' \
 > | partnerRef      | all |   String   | Partner's unique internal ID of request  |
 > | requestStatus      | all |   String   | Request Status  |
 > | onrcPortalNo | SentToONRC | String | ONRC Portal Number (ID) |
+> | onrcNcNo | SentToONRC | String | ONRC Calculation Note Number (ID) |
 > | accountBalance | SentToONRC | String | ONRC account wallet balance, if applicable |
 > | docUri      | DoneONRC,Finalised|   String   | Direct download URI for generated document (present only if generated)  |
 > | onrcInvoiceUri | Finalised* | String | "WALLET" - Hardcoded value for partners using wallet | Direct download URI for ONRC invoice (only for partners with self-invoice) |
@@ -176,6 +177,7 @@ curl -L 'https://$uri/api/partners/cancelRequest' \
 "partnerRef":  "12345",
 "requestStatus":  "SentToONRC",
 "onrcPortalNo": "856012",
+"onrcNcNo": "NC20240001",
 "accountBalance": "120"
 }
 ```
@@ -262,6 +264,7 @@ curl -L 'https://$uri/api/partners/queryRequestStatus' \
 > | partnerRef      |   String   | Partner's **unique internal ID** of request  |
 > | requestStatus      |   String   | Request Status  |
 > | onrcPortalNo | String | ONRC Portal Number |
+> | onrcNcNo | String | ONRC Calculation Note Number (ID) |
 > | accountBalance | String | ONRC account wallet balance, if applicable |
 > | docUri      |   String   | Direct download URI for generated document (present only if generated)  |
 > | onrcInvoiceUri | String | Direct download URI for ONRC invoice (only for partners with self-invoice) |
@@ -273,6 +276,7 @@ curl -L 'https://$uri/api/partners/queryRequestStatus' \
 "partnerRef":  "12345",
 "requestStatus":  "Finalised",
 "onrcPortalNo": "856012",
+"onrcNcNo": "NC20240001",
 "accountBalance" : "120",
 "docUri":  "https://firebasestorage.googleapis.com/v0/b/certificatconstatator-dev.appspot.com/o/2022_7_25_certificat273627-10S0Q.pdf?alt=media&token=ee42cf9c-c185-4291-9537-8bb518533218",
 "onrcInvoiceUri":  "WALLET"
