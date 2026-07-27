@@ -344,12 +344,13 @@ curl -L 'https://$uri/api/partners/queryOnrcStatus' \
  
  ```javascript
  "INFOCERT_CONSTATATOR_PJ"
- "INFOCERT_CONSTATATOR_PF (in curand)"
  "INFOCERT_RAPORT_ISTORIC_PJ"
- "INFORBR_SITUATIE_LA_ZI_PJ"
- "INFORBR_RAPORT_ISTORIC_PJ"
- "INFORBR_SITUATIE_LA_ZI_PF (in curand)"
- "INFORBR_RAPORT_ISTORIC_PF (in curand)"
+ "INFOCERT_CONSTATATOR_PF" *
+ "INFORBR_SITUATIE_LA_ZI_PJ" *
+ "INFORBR_RAPORT_ISTORIC_PJ" *
+ "INFORBR_SITUATIE_LA_ZI_PF" *
+ "INFORBR_RAPORT_ISTORIC_PF" *
+ * disponibil doar pentru instițutii financiare
  ```
 </details>
 
